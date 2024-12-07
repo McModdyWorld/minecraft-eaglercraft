@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Minecraft In Your Browser (Made by Alexander)</title>
+    <style>
+        :root, ::backdrop {
+            --m3-scheme-primary: 101 85 143;
+            --m3-scheme-on-primary: 255 255 255;
+            --m3-scheme-primary-container: 233 221 255;
+            --m3-scheme-on-primary-container: 32 16 71;
+            --m3-scheme-inverse-primary: 207 189 254;
+            --m3-scheme-secondary: 98 91 113;
+            --m3-scheme-on-secondary: 255 255 255;
+            --m3-scheme-secondary-container: 232 222 248;
+            --m3-scheme-on-secondary-container: 30 25 43;
+            --m3-scheme-background: 253 247 255;
+            --m3-scheme-on-background: 29 27 32;
+            --m3-scheme-surface: 253 247 255;
+            --m3-scheme-on-surface: 29 27 32;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root, ::backdrop {
+                color-scheme: dark;
+                --m3-scheme-primary: 207 189 254;
+                --m3-scheme-on-primary: 54 39 93;
+                --m3-scheme-primary-container: 77 61 117;
+                --m3-scheme-on-primary-container: 233 221 255;
+                --m3-scheme-secondary: 203 194 219;
+                --m3-scheme-on-secondary: 51 45 65;
+                --m3-scheme-secondary-container: 74 68 88;
+                --m3-scheme-on-secondary-container: 232 222 248;
+                --m3-scheme-background: 20 18 24;
+                --m3-scheme-on-background: 230 224 233;
+                --m3-scheme-surface: 20 18 24;
+                --m3-scheme-on-surface: 230 224 233;
+            }
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: rgb(var(--m3-scheme-background));
+            color: rgb(var(--m3-scheme-on-background));
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .header {
+            background-color: rgb(var(--m3-scheme-surface));
+            color: rgb(var(--m3-scheme-on-surface));
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: rgb(var(--m3-scheme-primary));
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .play-button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 100px;
+            background-color: rgb(var(--m3-scheme-primary-container));
+            color: rgb(var(--m3-scheme-on-primary-container));
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .play-button:hover {
+            background-color: rgb(var(--m3-scheme-primary));
+            color: rgb(var(--m3-scheme-on-primary));
+        }
+
+        .minecraft-image {
+            max-width: 100%;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Play Minecraft In Your Browser!</h1>
+        </div>
+        
+        <img src="picture.png" alt="Minecraft Game" class="minecraft-image" />
+        
+        <a href="play.html" class="play-button">Play Now</a>
+    </div>
+</body>
+</html>
